@@ -1,0 +1,22 @@
+{
+    "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+    "id": "pkgUpdate-apt",
+    "name": "Package Updates (APT + Flatpak)",
+    "description": "Check and manage APT and Flatpak package updates from the bar.",
+    "version": "1.0.0",
+    "author": "phaleixo",
+    "license": "MIT",
+    "icon": "system_update",
+    "type": "widget",
+    "capabilities": [
+        "dankbar-widget"
+    ],
+    "component": "./PkgUpdateWidget.qml",
+    "settings": "./PkgUpdateSettings.qml",
+    "requires_dms": ">=1.2.0",
+    "permissions": [
+        "settings_read",
+        "settings_write",
+        "process"
+    ]
+}

@@ -6,7 +6,7 @@ import qs.Modules.Plugins
 PluginSettings {
     id: root
 
-    pluginId: "pkgUpdate-apt"
+    pluginId: "update-deb"
 
     StyledText {
         width: parent.width

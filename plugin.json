@@ -1,6 +1,6 @@
 {
     "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
-    "id": "pkgUpdate-apt",
+    "id": "update-deb",
     "name": "Package Updates (APT + Flatpak)",
     "description": "Check and manage APT and Flatpak package updates from the bar.",
     "version": "1.0.0",

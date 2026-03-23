@@ -117,7 +117,7 @@ PluginComponent {
     function normalizeRefreshMins(value) {
         const parsed = Number(value)
         if (!Number.isFinite(parsed))
-            return 60
+            return 5
         return Math.max(5, Math.min(240, Math.floor(parsed)))
     }
 
@@ -285,7 +285,7 @@ PluginComponent {
                 root.packageError = ""
             }
             root.packageChecking = false
-        }, 60000)
+        }, 6000)
 
         if (root.showFlatpak) {
             root.flatpakChecking = true
@@ -330,9 +330,7 @@ PluginComponent {
     // ── Terminal launch ───────────────────────────────────────────────────────
     function runPackageUpdate() {
         root.closePopout()
-        const mode = normalizeBackendMode(root.backendMode)
-        const backend = mode === "auto" ? root.effectiveBackend : mode
-        const cmd = "aptdcon --refresh && sudo apt -o APT::Get::Always-Include-Phased-Updates=true upgrade -y; echo; echo '=== Done. Press Enter to close. ==='; read"
+        const cmd = "sudo apt upgrade -y; echo; echo '=== Done. Press Enter to close. ==='; read"
         Quickshell.execDetached(buildTerminalCommand(cmd))
     }
 

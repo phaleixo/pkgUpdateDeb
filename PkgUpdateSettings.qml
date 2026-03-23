@@ -36,7 +36,7 @@ PluginSettings {
         settingKey: "refreshMins"
         label: "Refresh Interval"
         description: "How often to check for available updates, in minutes."
-        defaultValue: 60
+        defaultValue: 5
         minimum: 5
         maximum: 240
         unit: "min"

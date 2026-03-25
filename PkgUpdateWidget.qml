@@ -285,7 +285,7 @@ PluginComponent {
                 root.packageError = ""
             }
             root.packageChecking = false
-        }, 6000)
+        }, 60000)
 
         if (root.showFlatpak) {
             root.flatpakChecking = true
